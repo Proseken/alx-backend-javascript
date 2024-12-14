@@ -1,4 +1,3 @@
-
 #!/usr/bin/env node
 // 2. Reading a file synchronously with Node JS
 const { readFileSync } = require('fs');
@@ -29,8 +28,10 @@ function countStudents(dbPath) {
     console.log(`Number of students: ${students.length}`);
     courses.forEach((courseData, course) => {
       console.log(
-  `Number of students in ${course}: ${courseData.count}. List: ${courseData.students.join(', ')}`
-);
+        `Number of students in ${course}: ${
+          courseData.count
+        }. List: ${courseData.students.join(', ')}`,
+      );
     });
   } catch (error) {
     throw new Error('Cannot load the database');
@@ -38,7 +39,3 @@ function countStudents(dbPath) {
 }
 
 module.exports = countStudents;
-
-
-
-
